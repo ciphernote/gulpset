@@ -8,10 +8,10 @@ var uglify = require('gulp-uglify');
 /*  Config for your environment */
 
 gulp.task("sass", function() {
-	gulp.src("assets/**/*scss")
+	gulp.src('assets/**/*scss')
 	.pipe(sass())
 	.pipe(autoprefixer())
-	.pipe(gulp.dest("./build/static/css"));
+	.pipe(gulp.dest('./build/static/css'));
 });
 
 gulp.task('jade', function () {
@@ -19,11 +19,13 @@ gulp.task('jade', function () {
 	.pipe(jade({
 		pretty: true
 	}))
-	.pipe(gulp.dest('./bulid/static/'));
+	.pipe(gulp.dest('./build/static/'));
 });
 
-gulp.task("js", function() {
-	gulp.src(["assets/js/**/*.js","!assets/js/min/**/*.js"])
+gulp.task('js', function() {
+	gulp.src(['assets/js/**/*.js','!assets/js/min/**/*.js'])
 	.pipe(uglify())
-	.pipe(gulp.dest("./build/js/min"));
+	.pipe(gulp.dest('./build/static/js'));
 });
+
+gulp.task('default', ['jade','sass','js']);
