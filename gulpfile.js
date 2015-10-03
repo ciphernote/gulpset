@@ -10,7 +10,7 @@ gulp.task("sass", function() {
         gulp.src("assets/**/*scss")
         .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(gulp.dest("build/static/css"));
+        .pipe(gulp.dest("./build/static/css"));
 });
 
 gulp.task('jade', function () {
@@ -18,5 +18,5 @@ gulp.task('jade', function () {
 	.pipe(jade({
 		pretty: true
 	}))
-	.pipe(gulp.dest('bulid/static/'));
+	.pipe(gulp.dest('./bulid/static/'));
 });
