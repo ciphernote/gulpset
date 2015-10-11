@@ -16,7 +16,7 @@ gulp.task("server", function() {
     });
 });
 gulp.task('sass', function() {
-	gulp.src('assets/**/*scss')
+	gulp.src('assets/sass/*scss')
 	.pipe(sass())
 	.pipe(autoprefixer())
 	.pipe(gulp.dest('./build/static/css'))
@@ -40,7 +40,7 @@ gulp.task('js', function() {
 });
 
 gulp.task("default",['server','jade','sass','js'], function() {
-	gulp.watch(["assets/js/**/*.js","!!assets/js/**/*.js'"],["js"]);
-	gulp.watch("sass/**/*.scss",["sass"]);
+	gulp.watch(["assets/js/**/*.js","!assets/js/**/*.js"],["js"]);
+	gulp.watch("assets/sass/*.scss",["sass"]);
 	gulp.watch("assets/contents/*.jade",["jade"]);
 });
