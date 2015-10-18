@@ -33,14 +33,14 @@ gulp.task('jade', function () {
 });
 
 gulp.task('js', function() {
-	gulp.src(['assets/js/**/*.js','!assets/js/**/*.js'])
+	gulp.src('assets/js/*.js')
 	.pipe(uglify())
 	.pipe(gulp.dest('./build/static/js'))
 	.pipe(browser.reload({stream:true}))
 });
 
 gulp.task("default",['server','jade','sass','js'], function() {
-	gulp.watch(["assets/js/**/*.js","!assets/js/**/*.js"],["js"]);
+	gulp.watch("assets/js/**/*.js",["js"]);
 	gulp.watch("assets/sass/*.scss",["sass"]);
 	gulp.watch("assets/contents/*.jade",["jade"]);
 });

@@ -1,14 +1,13 @@
 extend includes/_layout
 
 block content
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Hello Jade!!
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
+  div#conttainer
+    header
+      h1 Jade - node template engine
+      div.menu
+        button.menu-button
+          span.menu-button-inner
+    div#content
+      section
+  script(type='text/javascript',src='https://rawgit.com/jeffshaver/brief.js/master/src/brief.js')
+  script(type='text/javascript' src='js/main.js')

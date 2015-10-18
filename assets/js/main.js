@@ -1,5 +1,4 @@
-(function() {
-	window.addEventListener('load', function() {
-		alert('loaded');
-	});
-})();
+brief('.menu').on('click', function(ev) {
+  ev.preventDefault();
+  this.classList.toggle('open');
+});
