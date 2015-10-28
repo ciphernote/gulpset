@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 $accent-color: #1abc9c;
 $accent-hover-color: lighten($accent-color, 10%);
 
@@ -6,6 +8,7 @@ html,body{
   height: 100%;
   background-color: rgb(21, 23, 24);
   position: relative;
+  font-family: 'Noto Sans Japanese', serif;
 }
 
 button{
@@ -20,8 +23,8 @@ button{
 .menu {
   display: block;
   position: absolute;
-  top:0%;
-  left:93%;
+  top:50%;
+  left:50%;
   width: 40px;
   height: 30px;
   border: none;
