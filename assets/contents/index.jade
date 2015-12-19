@@ -3,35 +3,28 @@ extend includes/_layout
 block content
   div#container
     header#menu.cl.clsize
-      div.tabellCell
+      div.header_inr
         div#menuSocial
           ul
             li
-              a(href="#", target="_blank")
+              a(href="https//www.facebook.com/yuji.opus40", target="_blank")
                 img.Icon.Facebook(src="img/Icon_Facebook.png", alt="")
                 span Facebook
-                  span.Line
             li
               a(href="#", target="_blank")
                 img.Icon.Behance(src="img/Icon_Behance.png", alt="")
                 span Behance
-                  span.Line
         div#mainNavi
-          div.tableCell
+          h1
             a.logo(href="#", data-id="main")
-            nav
-              ul
-                li
-                  a(href="index.html")
-                    span Works
-                      span.Line 
-                li
-                  a(href="about/index.html")
-                    span About / Contact
-                      span.Line
-                li
-                  a(href="blog/index.html")
-                    span Blog / Stream
-                      span.Line
-    div.content
-      p portfolio
+          nav
+            ul
+              li
+                a(href="index.html")
+                  span Works
+              li
+                a(href="about/index.html")
+                  span About / Contact
+              li
+                a(href="blog/index.html")
+                  span Blog / Stream
