@@ -1,7 +1,7 @@
 // package import
 var gulp = require('gulp');
 var browser = require("browser-sync");
-var ejs = require("gulp-ejs");
+var jade = require("gulp-jade");
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
@@ -18,9 +18,9 @@ gulp.task("server", function() {
     });
 });
 
-gulp.task('ejs', function () {
-	gulp.src('assets/template/*.ejs')
-  .pipe(ejs())
+gulp.task('jade', function () {
+	gulp.src('assets/template/*.jade')
+  .pipe(jade())
 	.pipe(gulp.dest('./build/static/'))
 	.pipe(browser.reload({stream:true}))
 });
@@ -48,9 +48,9 @@ gulp.task('image', function() {
 	.pipe(browser.reload({stream:true}))
 });
 
-gulp.task("default",['server','ejs','sass','js','image'], function() {
+gulp.task("default",['server','jade','sass','js','image'], function() {
 	gulp.watch("assets/js/**/*.js",["js"]);
 	gulp.watch("assets/sass/*.scss",["sass"]);
-	gulp.watch("assets/template/*.ejs",["ejs"]);
+	gulp.watch("assets/template/*.jade",["jade"]);
 	gulp.watch("assets/img/*.{png,jpg,jpeg}",["image"]);
 });
