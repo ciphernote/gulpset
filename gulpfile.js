@@ -20,7 +20,9 @@ gulp.task("server", function() {
 
 gulp.task('jade', function () {
 	gulp.src('assets/template/*.jade')
-  .pipe(jade())
+  .pipe(jade({
+    pretty: true
+  }))
 	.pipe(gulp.dest('./build/static/'))
 	.pipe(browser.reload({stream:true}))
 });
