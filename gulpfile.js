@@ -53,6 +53,6 @@ gulp.task('image', function() {
 gulp.task("default",['server','jade','sass','js','image'], function() {
 	gulp.watch("assets/js/**/*.js",["js"]);
 	gulp.watch("assets/sass/*.scss",["sass"]);
-	gulp.watch("assets/template/*.jade",["jade"]);
+	gulp.watch(["assets/template/*.jade","assets/template/**/_*.jade"],["jade"]);
 	gulp.watch("assets/img/*.{png,jpg,jpeg}",["image"]);
 });
