@@ -20,16 +20,14 @@ gulp.task("server", function() {
 
 gulp.task('jade', function () {
 	gulp.src('assets/template/*.jade')
-  .pipe(jade({
-    pretty: true
-  }))
+  	.pipe(jade({pretty: true}))
 	.pipe(gulp.dest('./build/static/'))
 	.pipe(browser.reload({stream:true}))
 });
 
 gulp.task('sass', function() {
 	gulp.src('assets/sass/*scss')
-  .pipe(plumber())
+	.pipe(plumber())
 	.pipe(sass())
 	.pipe(autoprefixer())
 	.pipe(gulp.dest('./build/static/css'))
