@@ -1,5 +1,8 @@
 extend includes/_layout
 
+block append meta
+  include includes/_inc_meta_facebook
+
 block content
   div#container
     header
@@ -17,4 +20,9 @@ block content
               a(href="#",target="_blank") blog
             li
               a(href="#") contact
-    section.item
+    section.sns
+      div#sns-facebook
+        include includes/_inc_embed_facebook
+
+    footer
+      p#copyright No rights reserved.

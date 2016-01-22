@@ -3,19 +3,14 @@ html(lang="ja")
   head
     meta(charset='UTF-8')
     title No name
-    //[meta information]
-    meta(neme='keywords',content='')
-    meta(neme='description',content='')
-    //[meta Open Graph Protocol]
-    meta(property='og:title',content='')
-    meta(property='og:description',content='')
-    meta(property='og:image',content='')
-    meta(property='og:url',content='')
-    meta(property='og:type',content='website')
-    meta(property='og:locale',content='ja_JP')
-    //[link favicon]
-    link(rel='shortcut icon', href='css/style.css')
-    //[link stylesheet]
-    link(rel='stylesheet', href='css/style.css')
+
+    block meta
+      meta(name='viewport', content='width=device-width')
+      meta(neme='description',content='')
+      meta(neme='keywords',content='')
+
+    block style
+      link(rel='stylesheet', href='css/style.css')
+
   body
     block content
