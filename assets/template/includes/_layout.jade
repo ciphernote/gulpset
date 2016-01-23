@@ -5,16 +5,17 @@ html(lang="ja")
     title No name
 
     block meta
-      meta(name='author', content='')
+      meta(name='author', content=name)
       meta(name='viewport',content='width=device-width')
-      meta(neme='description',content='')
+      meta(neme='description',content=description)
       meta(neme='keywords',content='')
       meta(name="robots" ,content="INDEX,FOLLOW,NOODP,NOYDIR,NOARCHIVE")
 
     block style
       link(rel='stylesheet', href='css/style.css')
-      
-    script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js')
+    
+    block script  
+      script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js')
 
   body
-    block content
+    block body

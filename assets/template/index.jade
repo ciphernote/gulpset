@@ -1,9 +1,9 @@
 extend includes/_layout
 
 block append meta
-  include includes/_inc_meta_facebook
+  include includes/_inc_sns_meta
 
-block content
+block body
   div#container
     header
       div#header_inr
@@ -23,6 +23,8 @@ block content
     section.sns
       div#sns-facebook
         include includes/_inc_embed_facebook
+      div#sns-twitter
+        include includes/_inc_embed_twitter
 
     footer
       p#copyright No rights reserved.
