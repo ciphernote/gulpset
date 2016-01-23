@@ -10,41 +10,48 @@ var plumber = require("gulp-plumber");
 
 /*  Config for your environment */
 
-gulp.task("server", function() {
+var paths = {
+  "jadeSrc": "assets/template/*.jade",
+  "scssSrc": "assets/sass/*.scss",
+  "jsSrc": "assets/js/*.js",
+  "rootDir": "build/static/",
+}
+
+gulp.task('server', function() {
     browser({
         server: {
-            baseDir: "build/static"
+            baseDir: paths.rootDir
         }
     });
 });
 
 gulp.task('jade', function () {
-  return gulp.src('assets/template/*.jade')
+  return gulp.src(paths.jadeSrc)
   .pipe(jade({pretty: true}))
-  .pipe(gulp.dest('./build/static/'))
+  .pipe(gulp.dest(paths.rootDir))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('sass', function() {
-  return gulp.src('assets/sass/*scss')
+  return gulp.src(paths.scssSrc)
   .pipe(plumber())
   .pipe(sass())
   .pipe(autoprefixer())
-  .pipe(gulp.dest('./build/static/css'))
+  .pipe(gulp.dest(paths.rootDir + 'css'))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('js', function() {
-  return gulp.src('assets/js/*.js')
+  return gulp.src(paths.jsSrc)
   .pipe(uglify())
-  .pipe(gulp.dest('./build/static/js'))
+  .pipe(gulp.dest(paths.rootDir + 'js'))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('image', function() {
   return gulp.src('assets/img/*.{png,jpg,jpeg}')
   .pipe(imagemin())
-  .pipe(gulp.dest('./build/static/img'))
+  .pipe(gulp.dest(paths.rootDir + 'img'))
   .pipe(browser.reload({stream:true}))
 });
 
