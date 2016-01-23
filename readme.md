@@ -3,8 +3,7 @@
 <table>
 <tr>
 <td>Package</td>
-<td>browser-sync / gulp-jade / gulp-sass / gulp-autoprefixer<br />
-gulp-uglify / gulp-imagemin</td>
+<td>browser-sync / gulp-jade / gulp-sass / gulp-autoprefixer<br />/ gulp-load-plugins / gulp-uglify / gulp-jshint / gulp-imagemin</td>
 </tr>
 <tr>
 <td>Description</td>
