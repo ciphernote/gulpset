@@ -6,7 +6,6 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
-var plumber = require("gulp-plumber");
 
 /*  Config for your environment */
 
@@ -34,7 +33,6 @@ gulp.task('jade', function () {
 
 gulp.task('sass', function() {
   return gulp.src(paths.scssSrc)
-  .pipe(plumber())
   .pipe(sass())
   .pipe(autoprefixer())
   .pipe(gulp.dest(paths.rootDir + 'css'))
