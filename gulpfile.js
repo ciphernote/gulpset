@@ -1,12 +1,7 @@
 // package import
 var gulp = require('gulp');
+var $ = require("gulp-load-plugins")();
 var browser = require("browser-sync");
-var jade = require("gulp-jade");
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
-var imagemin = require('gulp-imagemin');
 
 /*  Config for your environment */
 
@@ -27,30 +22,30 @@ gulp.task('server', function() {
 
 gulp.task('jade', function () {
   return gulp.src(paths.jadeSrc)
-  .pipe(jade({pretty: true}))
+  .pipe($.jade({pretty: true}))
   .pipe(gulp.dest(paths.rootDir))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('sass', function() {
   return gulp.src(paths.scssSrc)
-  .pipe(sass())
-  .pipe(autoprefixer())
+  .pipe($.sass())
+  .pipe($.autoprefixer())
   .pipe(gulp.dest(paths.rootDir + 'css'))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('js', function() {
   return gulp.src(paths.jsSrc)
-  .pipe(jshint())
-  .pipe(uglify())
+  .pipe($.jshint())
+  .pipe($.uglify())
   .pipe(gulp.dest(paths.rootDir + 'js'))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('image', function() {
   return gulp.src('assets/img/*.{png,jpg,jpeg}')
-  .pipe(imagemin())
+  .pipe($.imagemin())
   .pipe(gulp.dest(paths.rootDir + 'img'))
   .pipe(browser.reload({stream:true}))
 });
