@@ -1,4 +1,24 @@
-# Gulpset
+# html5-static-gulp
+
+<table>
+<tr>
+<td>Package</td>
+<td>browser-sync<br />
+gulp-jade<br />
+gulp-sass<br />
+gulp-autoprefixer<br />
+gulp-uglify<br />
+gulp-imagemin</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Compile Jade templates</td>
+</tr>
+<tr>
+<td>Node Version</td>
+<td>≥ 4.1.1</td>
+</tr>
+</table>
 
 Sample gulpfile.js for  HTML template (Jade) and CSS preprocessors (sass). Auto-prefixer and Browser-Sync, Imagemin support.
 
@@ -11,3 +31,8 @@ Install gulpjs and some dependencies.
 Run gulp.
 
 		$ gulp
+
+## LICENSE
+
+(MIT License)  
+Copyright (c) 2016 Yuji Oyama
