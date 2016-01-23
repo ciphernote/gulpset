@@ -19,14 +19,14 @@ gulp.task("server", function() {
 });
 
 gulp.task('jade', function () {
-  gulp.src('assets/template/*.jade')
+  return gulp.src('assets/template/*.jade')
   .pipe(jade({pretty: true}))
   .pipe(gulp.dest('./build/static/'))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('sass', function() {
-  gulp.src('assets/sass/*scss')
+  return gulp.src('assets/sass/*scss')
   .pipe(plumber())
   .pipe(sass())
   .pipe(autoprefixer())
@@ -35,14 +35,14 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src('assets/js/*.js')
+  return gulp.src('assets/js/*.js')
   .pipe(uglify())
   .pipe(gulp.dest('./build/static/js'))
   .pipe(browser.reload({stream:true}))
 });
 
 gulp.task('image', function() {
-  gulp.src('assets/img/*.{png,jpg,jpeg}')
+  return gulp.src('assets/img/*.{png,jpg,jpeg}')
   .pipe(imagemin())
   .pipe(gulp.dest('./build/static/img'))
   .pipe(browser.reload({stream:true}))
