@@ -5,6 +5,7 @@ var jade = require("gulp-jade");
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
+var jshint = require('gulp-jshint');
 var imagemin = require('gulp-imagemin');
 
 /*  Config for your environment */
@@ -41,6 +42,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
   return gulp.src(paths.jsSrc)
+  .pipe(jshint())
   .pipe(uglify())
   .pipe(gulp.dest(paths.rootDir + 'js'))
   .pipe(browser.reload({stream:true}))
