@@ -4,6 +4,7 @@ block append meta
   include includes/_inc_sns_meta
 
 block body
+  include includes/_inc_embed_sns
   div#container
     header
       div#header_inr
@@ -20,11 +21,6 @@ block body
               a(href="#",target="_blank") blog
             li
               a(href="#") contact
-    section.sns
-      div#sns-facebook
-        include includes/_inc_embed_facebook
-      div#sns-twitter
-        include includes/_inc_embed_twitter
-
+      include includes/_inc_sns_button
     footer
       p#copyright No rights reserved.
