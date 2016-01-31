@@ -132,4 +132,4 @@ gulp.task("default",['server','jade','sass','js','image'], function() {
 });
 
 // bowerのCSSとJSを取ってくるタスク
-gulp.task('bower.init', ['bowerCSS', 'bowerCSS.concat','bowerJS']);
+gulp.task('bower', ['bowerCSS', 'bowerCSS.concat','bowerJS']);
