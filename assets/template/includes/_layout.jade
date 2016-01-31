@@ -2,17 +2,19 @@ doctype
 html(lang="ja")
   head
     meta(charset='UTF-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,, initial-scale=1")
     title No name
 
     block meta
       meta(name='author', content=name)
-      meta(name='viewport',content='width=device-width')
       meta(neme='description',content=description)
       meta(neme='keywords',content=keywords)
       meta(name="robots" ,content="INDEX,FOLLOW,NOODP,NOYDIR,NOARCHIVE")
 
     block style
       link(rel='stylesheet', href='css/style.css')
+      link(rel='stylesheet', href='css/_bundle.css')
 
     block script
       script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js')

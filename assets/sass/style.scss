@@ -8,15 +8,15 @@ $accent-hover-color: lighten($accent-color, 10%);
 $linkColor: #000;
 $linkHoverColor: #888;
 
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  font-size: 13px;
-  line-height: 18px;
+body {
+  padding-top: 50px;
 }
 
 #sns > div {
     display: inline-block;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
 }
