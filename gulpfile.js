@@ -6,7 +6,7 @@ var bower = require('main-bower-files');
 /*  Config for your environment */
 
 var paths = {
-  "jadeSrc": "assets/template/*.jade",
+  "jadeSrc": "assets/template/**/*.jade",
   "scssSrc": "assets/sass/*.scss",
   "jsSrc": "assets/js/*.js",
   "rootDir": "build/static/",
